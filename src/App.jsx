@@ -2,7 +2,10 @@ import { useState } from "react";
 
 import Perfil from "./components/Perfil";
 import ReposList from "./components/ReposList";
+
 import styles from "./App.module.css";
+
+import logoImg from "./assets/images/githubFinderLogo.png"
 
 function App() {
   const [userName, setUserName] = useState('')
@@ -11,7 +14,7 @@ function App() {
   return(
     <div className="container">
         <div className={styles.searchMenu}>
-          <img className={styles.logo} src="./src/assets/images/githubFinderLogo.png" alt="Logo GitHub Finder" />
+          <img className={styles.logo} src={logoImg}/>
           <div className={styles.searchBar}>
             <input className={styles.input} type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} placeholder="Nome de usuário do GitHub" />
             <button className={styles.button} onClick={handleSearch}>Buscar</button>

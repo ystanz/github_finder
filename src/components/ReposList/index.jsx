@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react"
-import styles from './ReposList.module.css'
+import { useEffect, useState } from "react";
+
+import styles from './ReposList.module.css';
+import loadLogo from '../../assets/images/loading.gif';
 
 
 const ReposList = ({userName}) => {
@@ -23,7 +25,7 @@ const ReposList = ({userName}) => {
     return (
         <div className={styles.reposContainer}>
             {isLoading ? (
-                <img src={"./src/assets/images/loading.gif"} className={styles.loadingIco}/>
+                <img className={styles.loadingIco} src={loadLogo}/>
             ) : (
                 <ul className={styles.list}>
                 {repos.map(({id, name, language, html_url}) => (
