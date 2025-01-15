@@ -1,0 +1,46 @@
+.list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.listItem {
+    list-style: none;
+    padding: 1rem;
+    /* border: 1px solid rgba(0,0,0,.3); */
+    border-radius: .5rem;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    background-color: #fff;
+    transition: all .5s;
+} .listItem:hover {
+    transform: scale(1.05);
+}
+
+.itemName b, .itemLanguage b {
+    margin-right: .5rem;
+}
+
+.itemLink {
+    display: block;
+    background-color: var(--primaryColor);
+    color: var(--textColor);
+    text-align: center;
+    font-weight: bold;
+    margin-top: .5rem;
+    padding: .5rem;
+    text-decoration: none;
+    transition: background-color .3s;
+} .itemLink:hover {
+    background-color: var(--secondaryColor);
+}
+
+.reposContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.loadingIco {
+    width: 3.5rem;
+    height: 3.5rem;
+}
